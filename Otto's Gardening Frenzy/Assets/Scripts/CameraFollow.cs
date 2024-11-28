@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraFollow : MonoBehaviour
 {
     public Transform target; // Target's transform component that the camera will follow
