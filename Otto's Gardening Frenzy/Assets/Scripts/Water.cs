@@ -28,9 +28,7 @@ public class Water : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Debug.Log(inventory.waterAmount);
-        
+    {   
         if (isColliding) // Checks if the player is still in the collider
         {
             if (Input.GetKey(KeyCode.Space)) // Checks if the space key is held down

@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour
     private float verDirection; // Variable for vertical direction
     private float horDirection; // Variable for horizontal direction
     [SerializeField] private float speed = 5; // Variable for speed; can be changed in the editor
-    private bool movementEnabled = true; // Variable for if movement is enabled or not
+    public bool movementEnabled = true; // Variable for if movement is enabled or not
 
     // Component variables
-    private Rigidbody2D rb; // Rigidbody2D variable (controls physics)
+    public Rigidbody2D rb; // Rigidbody2D variable (controls physics)
 
     // Start is called before the first frame update
     void Start()

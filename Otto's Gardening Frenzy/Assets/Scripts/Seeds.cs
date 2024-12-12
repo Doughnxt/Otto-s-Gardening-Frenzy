@@ -52,7 +52,7 @@ public class Seeds : MonoBehaviour
         {
             sRenderer.sprite = highlightedSprite; // Changes to the highlighted sprite
             actionsText.SetActive(true); // Displays text showing availible actions
-            isColliding = true;
+            isColliding = true; // Player is colliding
         }
     }
 
@@ -63,7 +63,7 @@ public class Seeds : MonoBehaviour
         {
             sRenderer.sprite = defaultSprite; // Changes to the regular sprite
             actionsText.SetActive(false); // Disables text showing availible actions
-            isColliding = false;
+            isColliding = false; // Player isn't colliding
         }
     }
 
@@ -89,7 +89,7 @@ public class Seeds : MonoBehaviour
         }
     }
 
-    // This function displays the inventory full text for a shot amount of time when called
+    // This function displays the inventory full text for a short amount of time when called
     private IEnumerator DisplayInventoryFullText()
     {
         inventoryFullText.SetActive(true); // Displays text
