@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class Inventory : MonoBehaviour
     public int maxSeedCarryAmount = 4; // Max inventory capacity
 
     [SerializeField] private TextMeshProUGUI text; // Text values
+    [SerializeField] private UnityEngine.UI.Slider waterAmountSlider;
+    public Gradient waterFill; // Gradient for water fill color
+    public UnityEngine.UI.Image waterImage;
     private List<int> itemCounts = new List<int>() { 0, 0, 0, 0 }; // List of counts of each type of seed
     private bool counting = false; // Boolean for if the counting method is running
     public float waterAmount; // Amount of water in inventory
@@ -25,6 +30,8 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        waterImage.color = waterFill.Evaluate(waterAmountSlider.normalizedValue);
+        waterAmountSlider.value = waterAmount; // Sets the UI water container to the amount of water collected
         text.text = $"x{itemCounts[0]} \nx{itemCounts[1]} \nx{itemCounts[2]} \nx{itemCounts[3]}"; // Updates text with counts of each seed
 
         if (items != itemsLastFrame) // Checks if seed values have updated since last frame by looking at the compare list

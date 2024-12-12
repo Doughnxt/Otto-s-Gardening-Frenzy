@@ -65,7 +65,7 @@ public class Water : MonoBehaviour
     {
         if (inventory.waterAmount < inventory.maxWaterAmount) // Checks if there's space in the inventory
         {
-            inventory.waterAmount += waterMoveRate; // Adds water to the inventory based on the rate defined earlier
+            inventory.waterAmount += waterMoveRate * Time.deltaTime; // Adds water to the inventory based on the rate defined earlier
         }
         else // If there's no space left in the inventory
         {

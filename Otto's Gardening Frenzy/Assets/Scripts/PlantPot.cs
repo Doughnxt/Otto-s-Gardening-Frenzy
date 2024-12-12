@@ -29,17 +29,17 @@ public class PlantPot : MonoBehaviour
     [SerializeField] private float carrotGrowTime = 1.4f; // The grow time for each stage of carrots
     [SerializeField] private float lettuceGrowTime = 1.2f; // The grow time for each stage of lettuce
 
-    private bool growing = false; // variable for if the plant is growing
-    private bool planted = false; // variable for if the plant has been planted
-    private bool canWater = false; // variable for if the plant has been planted and can be watered
-    private bool isWatering = false; // variable for if the plant is being watered
+    public bool growing = false; // variable for if the plant is growing
+    public bool planted = false; // variable for if the plant has been planted
+    public bool canWater = false; // variable for if the plant has been planted and can be watered
+    public bool isWatering = false; // variable for if the plant is being watered
 
     [SerializeField] private float wateringTime = 1f; // Watering time
     [SerializeField] private float moveSpeed = 3f; // Speed of moving Otto to the watering position
     [SerializeField] private GameObject waterParticles; // The water particles object
     private PlayerMovement player; // Player script
     [SerializeField] private Vector3 wateringPosition; // Watering position for the player to move to
-    private bool atWateringPosition = false; // variable for if Otto is at the watering position
+    public bool atWateringPosition = false; // variable for if Otto is at the watering position
 
     // Start is called before the first frame update
     void Start()
@@ -243,6 +243,8 @@ public class PlantPot : MonoBehaviour
         yield return new WaitForSeconds(growTime); // Waits for the given grow time
         plants[1].SetActive(false);// Disbales the 2nd plant sprite
         plants[2].SetActive(true); // Sets the 3rd plant sprite to active
+        HarvestPlant harvestPlant = plants[2].GetComponent<HarvestPlant>(); // Gets the harvest plant component from the plant gameObject
+        harvestPlant.harvested = false; // Allows the plant to be harvested
     }
 
     // Called when a 2D collider enters this game object's collider
