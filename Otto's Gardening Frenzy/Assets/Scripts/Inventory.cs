@@ -12,10 +12,13 @@ public class Inventory : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text; // Text values
     private List<int> itemCounts = new List<int>() { 0, 0, 0, 0 }; // List of counts of each type of seed
     private bool counting = false; // Boolean for if the counting method is running
+    public float waterAmount; // Amount of water in inventory
+    public float maxWaterAmount = 20; // Maximum amount of water that can be stored in the inventory
 
     // Start is called before the first frame update
     void Start()
     {
+        waterAmount = 0;
         itemsLastFrame = new List<string>(items); // Sets the compare list to the items list
     }
 
