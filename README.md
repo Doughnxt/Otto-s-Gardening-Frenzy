@@ -10,17 +10,17 @@ Key results:
 	- Created UI elements that show visuals relating to the game
 
 Project links:
-	- Link to GitHub
-         - https://github.com/Doughnxt/Otto-s-Gardening-Frenzy
-.
-	- Link to project zip
-         - https://drive.google.com/file/d/1i0Wx5x6xS3hlVQJ-Pi1ru1WUDHkCMda_/view
-.
-	- Link to itch.io (playable version)
-         - https://doughnxt.itch.io/ottos-gardening-frenzy?secret=22ie02yTeyvMc14KaL0RY2o3o
-.
-	- Link to video
-         - https://drive.google.com/file/d/1yqu04IwboLIC1ysIo0QqptHdvFihc963/view
+Link to GitHub:
+https://github.com/Doughnxt/Otto-s-Gardening-Frenzy
+
+Link to project zip:
+https://drive.google.com/file/d/1i0Wx5x6xS3hlVQJ-Pi1ru1WUDHkCMda_/view
+
+ink to itch.io (playable version):
+https://doughnxt.itch.io/ottos-gardening-frenzy?secret=22ie02yTeyvMc14KaL0RY2o3o
+
+Link to video:
+https://drive.google.com/file/d/1yqu04IwboLIC1ysIo0QqptHdvFihc963/view
 
 Packages explored:
 	- Clip Studio Paint
